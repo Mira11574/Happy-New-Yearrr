@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy New Year!</title>
+  <style>
+    /* Page setup */
+    body {
+      background: #2a2a2a;
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Animated and colorful "Happy New Year" */
+    h1 {
+      font-size: 80px;
+      color: #ffcc00;
+      font-weight: bold;
+      animation: move 3s ease-in-out infinite, colorChange 3s infinite;
+      text-align: center;
+    }
+
+    /* Animation for moving "Happy New Year" */
+    @keyframes move {
+      0% {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+    }
+
+    /* Color change animation */
+    @keyframes colorChange {
+      0% {
+        color: #ff6347;
+      }
+      25% {
+        color: #ffcc00;
+      }
+      50% {
+        color: #32cd32;
+      }
+      75% {
+        color: #00bfff;
+      }
+      100% {
+        color: #ff6347;
+      }
+    }
+
+    /* Fireworks background animation */
+    .fireworks {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://cdn.pixabay.com/photo/2015/12/02/19/34/fireworks-1070972_960_720.jpg') no-repeat center center;
+      background-size: cover;
+      animation: fadeInOut 6s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    /* Fade in/out effect for fireworks */
+    @keyframes fadeInOut {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="fireworks"></div>
+  <h1>Happy New Year!</h1>
+</body>
+</html>
